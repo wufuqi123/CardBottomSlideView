@@ -3,6 +3,8 @@ plugins {
     id 'kotlin-android'
 }
 
+//apply from: 'gradle-plugin-mvn-push.gradle'
+
 android {
     compileSdkVersion 33
     buildToolsVersion "32.0.0"

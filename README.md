@@ -2,7 +2,7 @@
     一个可以从底部滑动的卡片，可以自定义多个滑动节点
 ```
 
-#### ![演示](https://github.com/wufuqi123/CardBottomSlideView/raw/master/assets/gif/1.gif)
+#### ![演示](https://raw.githubusercontent.com/wufuqi123/CardBottomSlideView/master/img/1.gif)
 
 
 
