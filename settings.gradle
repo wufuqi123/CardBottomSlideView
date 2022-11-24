@@ -1,0 +1,3 @@
+rootProject.name = "CardBottomSlideView"
+include ':app'
+include ':CardBottomSlideView'
