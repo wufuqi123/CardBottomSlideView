@@ -164,6 +164,10 @@ class CardBottomSlideView : FrameLayout {
     private var startDispatchTouchEventY = 0f
 
 
+    private var maxNoResponseMoveY = 20f
+    private var currNoResponseMoveY = 0f
+
+
     /**
      * 根据角标获取可滑动的节点  mHeightList
      */
@@ -320,9 +324,10 @@ class CardBottomSlideView : FrameLayout {
                     returnDispatchTouchValue = super.dispatchTouchEvent(ev)
                 }
                 isTouchScrollView = false
-
+                currNoResponseMoveY = 0f
             }
             MotionEvent.ACTION_UP -> {
+
                 if (!(y <= currMoveTopY || y >= currMoveBottomY) && !isTouchScrollView) {
                     val moveOffsetY = y - dispatchTouchStartY
                     val moveRatioY = abs(currMoveTopY - currMoveTopY) * moveRatio
@@ -354,6 +359,12 @@ class CardBottomSlideView : FrameLayout {
                 isTouch = false
             }
             MotionEvent.ACTION_MOVE -> {
+                currNoResponseMoveY += abs(intervalTouchY - ev.rawY)
+                if (currNoResponseMoveY < maxNoResponseMoveY) {
+//                    intervalTouchY = ev.rawY
+                    return true
+                }
+
                 if (isTouch) {
                     if (isMove) move(ev)
                     else if (mTouchScrollView != null && (isTouchScrollView || isTouchScrollView(ev))) {

@@ -1,6 +1,7 @@
 package cn.wufuqi.test
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
@@ -80,6 +81,10 @@ class MainActivity : AppCompatActivity() {
             cbsv.animationPosition(position = 2)
         }
 
+
+        findViewById<View>(R.id.v_1).setOnClickListener {
+            Log.e("-----------","---------------")
+        }
     }
 
 

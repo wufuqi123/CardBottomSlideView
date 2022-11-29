@@ -44,5 +44,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
 //    implementation project(path: ':CardBottomSlideView')
-    implementation 'cn.wufuqi:CardBottomSlideView:1.0.1'
+    implementation 'cn.wufuqi:CardBottomSlideView:1.0.2'
 }
